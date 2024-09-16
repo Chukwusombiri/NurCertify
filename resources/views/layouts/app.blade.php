@@ -61,6 +61,6 @@
 	<script src="{{url('js/jquery.countdown.js')}}"></script>
 	<script src="{{url('js/imagesloaded.pkgd.min.js')}}"></script>
 	<script src="{{url('js/scrollIt.min.js')}}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJdanixi2Nzt7V-XXzo22neY4Eso8DXCQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{config('app.googke_key')}}"></script>
 	<script src="{{url('js/custom.js')}}"></script>
 </html>
