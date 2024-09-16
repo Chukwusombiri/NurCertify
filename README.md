@@ -1,64 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# NurCertify - Online Educational Platform for Nurses
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+NurCertify is an online education and training platform that provides professional support for nurses seeking to enhance their qualifications. The platform focuses on prepping nurses for various nursing-related examinations through structured online assistance.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+__User Registration and Verification:__ Clients can sign up, verify their email, and gain access to the platform.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+__Third-Party Integration:__ A third-party communication widget allows users to easily contact the platform for assistance.
 
-## Learning Laravel
+__Admin Panel:__ Administrators can manage user accounts, roles, and settings through dedicated admin pages.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+__Responsive Design:__ The application is designed with responsive and modern UI components for an intuitive user experience.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+__Role-Based Access Control:__ Admin access is restricted and managed through role-based authentication.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Technologies Used
 
-### Premium Partners
+- __Backend:__ Laravel, Laravel Breeze
+- __Frontend:__ TailwindCSS, FontAwesome, LineAwesome
+- __Database:__ SQLite
+- Other: Third-party communication widget integration
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+__Clone the repository:__
+- `git clone https://github.com/your-username/nurcertify.git`
+- `cd nurcertify`
 
-## Code of Conduct
+__Install dependencies:__
+- `composer install`
+- `npm install`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+__Set up environment variables:__
+Create a .env file from the .env.example file and configure your environment settings, especially the database connection.
 
-## Security Vulnerabilities
+- `cp .env.example .env`
+- `php artisan key:generate`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+__Run migrations:__
+Migrate the database to create the necessary tables.
+`php artisan migrate`
+
+__Start the development server:__
+- `php artisan serve`
+
+__Build the front-end assets:__
+- Use Laravel Mix to compile the TailwindCSS assets.
+- `npm run dev`
+
+
+## Usage
+### User Workflow
+Users can sign up, verify their email, and access the platform to explore available services.
+Through a third-party widget, users can contact the platform administrators for inquiries and assistance.
+Admin users can manage the app, including creating, updating, or deleting user accounts, changing user roles, and other administrative settings.
+
+### Admin Features
+- __User Management:__ Admins can create, modify, and delete user accounts.
+- __Role Management:__ Admins can assign roles and manage access permissions.
+- __Account Settings:__ Admins can modify various account settings and ensure platform functionality.
+
+
+## Key Contributions
+- Laravel Breeze was used for scaffolding the authentication and user verification system.
+- TailwindCSS was integrated to provide responsive and modern UI components.
+- SQLite was used as the lightweight database during development.
+- Third-party widget integration allows seamless communication between users and platform administrators.
+- Admin Pages were built to manage users, roles, and platform settings efficiently.
+
+
+## Credits
+FontAwesome and LineAwesome for the icons used throughout the application.
+
 
 ## License
+This project is licensed under the MIT License.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
